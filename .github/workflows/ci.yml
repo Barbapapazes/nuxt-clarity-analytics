@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: nci
 
+      - name: Prepare
+        run: nr dev:prepare
+
       - name: Lint
         run: nr lint
 
