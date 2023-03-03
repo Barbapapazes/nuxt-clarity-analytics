@@ -1,4 +1,6 @@
-export default defineNitroPlugin((nitroApp) => {
+import type { NitroAppPlugin } from 'nitropack'
+
+const plugin: NitroAppPlugin = ((nitroApp) => {
   nitroApp.hooks.hook('render:html', (html) => {
     const microsoftClarityID = process.env.MICROSOFT_CLARITY_ID
     if (!microsoftClarityID) { return }
@@ -8,3 +10,5 @@ export default defineNitroPlugin((nitroApp) => {
     return html.head.push(`<script>${script}</script>`)
   })
 })
+
+export default plugin
