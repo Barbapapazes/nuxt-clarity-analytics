@@ -39,7 +39,11 @@ export default defineNuxtConfig({
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+Then, you must register your clarity ID project `MICROSOFT_CLARITY_ID` in your environment variables.
+
+And _Voilà_!
+
+You can easily check that the script is correctly injected by inspecting your page on your browser. Note that nothing is injected if the key is missing!
 
 ## Development
 
