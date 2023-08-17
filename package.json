@@ -28,18 +28,19 @@
     "test:watch": "vitest watch",
     "ci:publish": "zx ./scripts/publish.mjs"
   },
+  "packageManager": "pnpm@8.6.12",
   "dependencies": {
-    "@nuxt/kit": "^3.2.2"
+    "@nuxt/kit": "^3.6.5"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "^0.2.1",
-    "@nuxt/schema": "^3.2.2",
-    "@nuxt/test-utils": "^3.2.2",
+    "@nuxt/schema": "^3.6.5",
+    "@nuxt/test-utils": "^3.6.5",
     "changelogen": "^0.4.1",
-    "eslint": "^8.34.0",
-    "nuxt": "^3.2.2",
+    "eslint": "^8.47.0",
+    "nuxt": "^3.6.5",
     "vitest": "^0.28.5",
-    "zx": "^7.1.1"
+    "zx": "^7.2.3"
   }
 }
