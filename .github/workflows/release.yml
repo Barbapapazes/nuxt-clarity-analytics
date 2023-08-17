@@ -32,8 +32,8 @@ jobs:
         run: nci
 
         # Used to build the package
-      - name: Build
-        run: nr prepack
+      - name: Prepare
+        run: nr dev:prepare
 
       - run: pnpm publish --access public --no-git-checks
         env:
