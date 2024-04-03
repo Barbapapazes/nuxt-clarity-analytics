@@ -19,14 +19,7 @@ A module to easily integrate Clarity Analytics into your Nuxt 3 project.
 1. Add `nuxt-clarity-analytics` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D nuxt-clarity-analytics
-
-# Using yarn
-yarn add --dev nuxt-clarity-analytics
-
-# Using npm
-npm install --save-dev nuxt-clarity-analytics
+npx nuxi@latest module add clarity-analytics
 ```
 
 2. Add `nuxt-clarity-analytics` to the `modules` section of `nuxt.config.ts`
