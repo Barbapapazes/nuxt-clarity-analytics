@@ -18,12 +18,13 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build",
+    "prepack": "nuxt-module-build build",
+    "dev:prepare": "nuxt-module-build build --stub; nuxt-module-build prepare; nuxi prepare playground",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "bumpp",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
@@ -36,6 +37,7 @@
     "@nuxt/module-builder": "^0.2.1",
     "@nuxt/schema": "^3.6.5",
     "@nuxt/test-utils": "^3.6.5",
+    "nuxt-clarity-analytics": "link:.",
     "bumpp": "^9.1.1",
     "changelogen": "^0.4.1",
     "eslint": "^8.47.0",
