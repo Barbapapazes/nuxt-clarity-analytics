@@ -1,43 +1,21 @@
-name: Publish
-
-permissions:
-  contents: write
+name: Release
 
 on:
   push:
     tags:
-      - '**'
+      - 'v*'
 
 jobs:
-  publish:
-    name: Publish
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Install pnpm & ni
-        run: npm install -g pnpm @antfu/ni
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: pnpm
-          registry-url: https://registry.npmjs.org/
-
-      - name: Install dependencies
-        run: nci
-
-        # Used to build the package
-      - name: Prepare
-        run: nr dev:prepare
-
-      - run: pnpm publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          node-version: 16.x
 
       - run: npx changelogithub
         env:

@@ -1,8 +1,7 @@
-import { createResolver, defineNuxtModule } from '@nuxt/kit'
-import { fileURLToPath } from 'node:url'
+import { createResolver, defineNuxtModule, addServerPlugin, updateRuntimeConfig, addImportsDir } from '@nuxt/kit'
+import type { ModuleOptions } from './types'
 
-// Module options TypeScript inteface definition
-export interface ModuleOptions { }
+export * from './types'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -12,15 +11,16 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt: '>=3.0.0'
     }
   },
-  // Default configuration options of the Nuxt module
   defaults: {},
-  setup(_, nuxt) {
+  setup() {
     const { resolve } = createResolver(import.meta.url)
-    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
 
-    nuxt.hook('nitro:config', config => {
-      config.plugins = config.plugins || []
-      config.plugins.push(resolve(runtimeDir, 'server', 'plugins', 'clarity'))
+    updateRuntimeConfig({
+      clarityId: '',
     })
-  }
+
+    addImportsDir(resolve('./runtime/app/utils'))
+
+    addServerPlugin(resolve('./runtime/server/plugins/clarity.ts'))
+  },
 })

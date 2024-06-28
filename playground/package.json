@@ -1,4 +1,13 @@
 {
   "private": true,
-  "name": "nuxt-clarity-analytics-playground"
+  "name": "nuxt-clarity-analytics-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "preview": "nuxi preview"
+  },
+  "dependencies": {
+    "nuxt-clarity-analytics": "latest"
+  }
 }

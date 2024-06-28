@@ -1,48 +1,73 @@
 name: CI
 
 on:
-  merge_group:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
-
-concurrency:
-  group: ci-${{ github.head_ref }}
-  cancel-in-progress: true
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  ci:
-    name: CI
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+      - run: corepack enable
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
-          fetch-depth: 0
-
-      - name: Install pnpm & ni
-        run: npm install -g pnpm @antfu/ni
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+          node-version: 20.5
           cache: pnpm
 
       - name: Install dependencies
-        run: nci
+        run: pnpm install
 
       - name: Prepare
-        run: nr dev:prepare
+        run: pnpm run dev:prepare
 
-      - name: Lint
-        run: nr lint
+      - name: Lint files
+        run: pnpm run lint
 
-      - name: Test
-        run: nr test
+  build:
+    name: Build
+    runs-on: ubuntu-latest
 
-      - name: Prepack
-        run: nr prepack
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+      - run: corepack enable
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        with:
+          node-version: 20.5
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Prepare
+        run: pnpm run dev:prepare
+
+      - name: Run build
+        run: pnpm run prepack
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+      - run: corepack enable
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        with:
+          node-version: 20.5
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Prepare
+        run: pnpm run dev:prepare
+
+      - name: Run tests
+        run: pnpm run test

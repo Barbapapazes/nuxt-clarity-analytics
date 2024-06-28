@@ -1,4 +1,3 @@
 export default defineNuxtConfig({
-  modules: ['../src/module'],
-  myModule: {}
+  modules: ['nuxt-clarity-analytics'],
 })

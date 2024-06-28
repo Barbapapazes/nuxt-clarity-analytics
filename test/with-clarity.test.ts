@@ -1,5 +1,5 @@
-import { describe, it, expect, vi } from 'vitest'
 import { fileURLToPath } from 'node:url'
+import { describe, it, expect, vi } from 'vitest'
 import { setup, $fetch } from '@nuxt/test-utils'
 
 describe('ssr with Clarity', async () => {

@@ -6,6 +6,9 @@
 
 A module to easily integrate Clarity Analytics into your Nuxt 3 project.
 
+> [!NOTE]
+> I recommend you to give a try to [Nuxt Scripts](https://scripts.nuxt.com/scripts/marketing/clarity), a more complexe solution.
+
 - [✨ &nbsp;Release Notes](https://github.com/Barbapapazes/nuxt-clarity-analytics/releases)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
@@ -19,14 +22,7 @@ A module to easily integrate Clarity Analytics into your Nuxt 3 project.
 1. Add `nuxt-clarity-analytics` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D nuxt-clarity-analytics
-
-# Using yarn
-yarn add --dev nuxt-clarity-analytics
-
-# Using npm
-npm install --save-dev nuxt-clarity-analytics
+npx nuxi@latest module add clarity-analytics
 ```
 
 2. Add `nuxt-clarity-analytics` to the `modules` section of `nuxt.config.ts`
@@ -39,11 +35,13 @@ export default defineNuxtConfig({
 })
 ```
 
-Then, you must register your clarity ID project `MICROSOFT_CLARITY_ID` in your environment variables.
+Then, you must register your clarity ID project `NUXT_CLARITY_ID` in your environment variables.
 
 And _Voilà_!
 
 You can easily check that the script is correctly injected by inspecting your page on your browser. Note that nothing is injected if the key is missing!
+
+You can also use the util `clarityContent` to use a cookie when the user consent to it. It's a wrapper around `window.clarity`. [See Clarity documentation](https://learn.microsoft.com/en-us/clarity/setup-and-installation/cookie-consent).
 
 ## Development
 
