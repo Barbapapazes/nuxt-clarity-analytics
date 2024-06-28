@@ -7,7 +7,7 @@
 A module to easily integrate Clarity Analytics into your Nuxt 3 project.
 
 > [!NOTE]
-> I recommend you to give a try to [Nuxt Scripts](https://scripts.nuxt.com/scripts/marketing/clarity), a more complexe solution.
+> I recommend you to give a try to [Nuxt Scripts](https://scripts.nuxt.com/scripts/marketing/clarity), a more complete solution.
 
 - [✨ &nbsp;Release Notes](https://github.com/Barbapapazes/nuxt-clarity-analytics/releases)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
