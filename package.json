@@ -43,6 +43,6 @@
     "nuxt": "^3.6.5",
     "nuxt-clarity-analytics": "link:.",
     "vitest": "^0.28.5",
-    "zx": "^7.2.3"
+    "zx": "^8.0.0"
   }
 }
