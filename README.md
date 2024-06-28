@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Then, you must register your clarity ID project `MICROSOFT_CLARITY_ID` in your environment variables.
+Then, you must register your clarity ID project `NUXT_CLARITY_ID` in your environment variables.
 
 And _Voilà_!
 
