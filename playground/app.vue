@@ -10,6 +10,8 @@ function consent() {
   <div>
     <h1>Playground</h1>
 
-    <button @click="consent()">Click me</button>
+    <button @click="consent()">
+      Click me
+    </button>
   </div>
 </template>

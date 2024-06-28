@@ -1,4 +1,4 @@
-import { createResolver, defineNuxtModule, addServerPlugin, updateRuntimeConfig, addImports, addImportsDir } from '@nuxt/kit'
+import { createResolver, defineNuxtModule, addServerPlugin, updateRuntimeConfig, addImportsDir } from '@nuxt/kit'
 import type { ModuleOptions } from './types'
 
 export * from './types'
@@ -16,7 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
     const { resolve } = createResolver(import.meta.url)
 
     updateRuntimeConfig({
-      clarityId: ''
+      clarityId: '',
     })
 
     addImportsDir(resolve('./runtime/app/utils'))
