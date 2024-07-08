@@ -35,6 +35,6 @@
     "eslint": "^9.6.0",
     "nuxt": "^3.12.2",
     "nuxt-clarity-analytics": "link:.",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.0"
   }
 }
