@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.8
+
+[compare changes](https://github.com/barbapapazes/nuxt-clarity-analytics/compare/v0.0.7...v0.0.8)
+
+### 🏡 Chore
+
+- Update deps ([b2b8cce](https://github.com/barbapapazes/nuxt-clarity-analytics/commit/b2b8cce))
+
+### 🤖 CI
+
+- Remove release ([1bd8693](https://github.com/barbapapazes/nuxt-clarity-analytics/commit/1bd8693))
+
+### ❤️ Contributors
+
+- Barbapapazes <e.soubiran25@gmail.com>
+
 ## v0.0.7
 
 [compare changes](https://github.com/barbapapazes/nuxt-clarity-analytics/compare/v0.0.6...v0.0.7)
