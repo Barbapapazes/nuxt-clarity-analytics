@@ -1,6 +1,6 @@
 {
   "name": "nuxt-clarity-analytics",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A module to easily integrate Clarity Analytics into your Nuxt 3 project.",
   "repository": "barbapapazes/nuxt-clarity-analytics",
   "license": "MIT",
