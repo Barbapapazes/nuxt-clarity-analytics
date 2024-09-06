@@ -21,6 +21,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     addImportsDir(resolve('./runtime/app/utils'))
 
-    addServerPlugin(resolve('./runtime/server/plugins/clarity.ts'))
+    addServerPlugin(resolve('./runtime/server/plugins/clarity'))
   },
 })
