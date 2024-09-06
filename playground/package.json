@@ -8,6 +8,6 @@
     "preview": "nuxi preview"
   },
   "dependencies": {
-    "nuxt-clarity-analytics": "latest"
+    "nuxt-clarity-analytics": "workspace:*"
   }
 }

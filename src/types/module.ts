@@ -1,1 +1,1 @@
-export interface ModuleOptions { }
+export type ModuleOptions = object
