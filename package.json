@@ -22,7 +22,7 @@
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.15.9",
   "dependencies": {
     "@nuxt/kit": "^3.13.1"
   },
